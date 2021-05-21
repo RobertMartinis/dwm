@@ -114,12 +114,12 @@ static const char *termcmd[]  = { TERMINAL, NULL };
  * Xresources preferences to load at startup
  */
 ResourcePref resources[] = {
-		{ "col0",		STRING,	&normbordercolor},
-		{ "col0",		STRING,	&selbordercolor},
-		{ "col0",		STRING,	&normbgcolor},
-		{ "col0",		STRING,	&normfgcolor},
-		{ "col0",		STRING,	&selfgcolor},
-		{ "col0",		STRING,	&selbgcolor},
+		{ "ignore",		STRING,	&normbordercolor},
+		{ "ignore",		STRING,	&selbordercolor},
+		{ "ignore",		STRING,	&normbgcolor},
+		{ "ignore",		STRING,	&normfgcolor},
+		{ "ignore",		STRING,	&selfgcolor},
+		{ "ignore",		STRING,	&selbgcolor},
 		{ "borderpx",		INTEGER, &borderpx },
 		{ "snap",		INTEGER, &snap },
 		{ "showbar",		INTEGER, &showbar },
