@@ -5,7 +5,7 @@
 #define TERMCLASS "St"
 
 /* appearance */
-static const unsigned int baralpha = 225;
+static const unsigned int baralpha = 200;
 static const unsigned int borderalpha = OPAQUE; 
 static unsigned int borderpx  = 3;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
@@ -17,13 +17,14 @@ static int swallowfloating    = 0;        /* 1 means swallow floating windows by
 static int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
-static char *fonts[]          = { "monospace:size=10", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
-static char normbgcolor[]           = "#222222";
-static char normbordercolor[]       = "#444444";
-static char normfgcolor[]           = "#bbbbbb";
-static char selfgcolor[]            = "#eeeeee";
-static char selbordercolor[]        = "#770000";
-static char selbgcolor[]            = "#005577";
+static char *fonts[]          = { "JetBrains Mono NL:style=Bold:size=10", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
+static char normbgcolor[]           = "#071012";
+static char normbordercolor[]       = "#071012";
+static char normfgcolor[]           = "#98aea8";
+static char selfgcolor[]            = "#cbdfe0";
+static char selbordercolor[]        = "#9c8e8e";
+static char selbgcolor[]            = "#1d2a24";
+
 static const char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -113,12 +114,12 @@ static const char *termcmd[]  = { TERMINAL, NULL };
  * Xresources preferences to load at startup
  */
 ResourcePref resources[] = {
-		{ "color0",		STRING,	&normbordercolor },
-		{ "color8",		STRING,	&selbordercolor },
-		{ "color0",		STRING,	&normbgcolor },
-		{ "color4",		STRING,	&normfgcolor },
-		{ "color0",		STRING,	&selfgcolor },
-		{ "color4",		STRING,	&selbgcolor },
+		{ "col0",		STRING,	&normbordercolor},
+		{ "col0",		STRING,	&selbordercolor},
+		{ "col0",		STRING,	&normbgcolor},
+		{ "col0",		STRING,	&normfgcolor},
+		{ "col0",		STRING,	&selfgcolor},
+		{ "col0",		STRING,	&selbgcolor},
 		{ "borderpx",		INTEGER, &borderpx },
 		{ "snap",		INTEGER, &snap },
 		{ "showbar",		INTEGER, &showbar },
